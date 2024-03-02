@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+  text-align: justify;
+
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>HTTP1.1 vs HTTP2</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <p>The first version of HTTP [Hypertext transfer protocol] was created in 1997 also called HTTP1.1. Later at 2015, a new version of HTTP called HTTP2 was created to enhance the performance and to overcome the disadvantages in the previous version.
+        HTTP/1.1 sends messages as plain text, and HTTP/2 encodes them into binary data and arranges them carefully. This implies that HTTP/2 can have various delivery models.
+      </p>
+      <p>If a request at the queue head cannot retrieve its required resources, it can block all requests behind it. This phenomenon is called head-of-line blocking (HOL blocking) in HTTP/1.1. To overcome these problems, the HTTP/2 developers introduced a binary framing layer. This layer partitions requests and responses in tiny data packets and encodes them. Due to this, multiple requests and responses become able to run parallelly with HTTP/2 and chances of HOL.</p>
+      <p>HTTP1.1 need separate control flow mechanism for every new TCP connection Whereas, HTTP2 multiplexes stream within a single TCP connection.
+        While HTTP/1.1 relies on textual data exchange, HTTP/2 utilizes a binary protocol, which is more efficient to parse and process by both servers and clients.
+      </p>
+      <p>HTTP/1.x uses formats like gzip to compress the data transferred in the messages. HTTP/2 uses HPACK compression to decrease the average size of the header. This compression program encodes the header metadata using Huffman coding, which significantly reduces its size as a result.</p>
+      <h4>Conclusion</h4>
+      <p>In summary, the transition from HTTP/1.1 to HTTP/2 represents a pivotal moment in the evolution of web protocols. HTTP/2's emphasis on performance, efficiency, and modernization addresses many of the shortcomings of its predecessor, ushering in a new era of faster, more responsive web experiences. As web developers continue to embrace HTTP/2 and its capabilities, the internet ecosystem is poised for further innovation and optimization in the years to come.</p>
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+</body>
+</html>
